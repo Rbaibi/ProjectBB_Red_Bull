@@ -1,0 +1,5 @@
+version: '3'
+services:
+  facedetection:
+    image: "docker.mobiledgex.net/mobiledgex/images/facedetection"
+    network_mode: "host"

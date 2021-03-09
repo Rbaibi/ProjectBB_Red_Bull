@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_speedtest_settings"
+        android:icon="@drawable/ic_menu_settings"
+        android:title="Settings"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_copy_cloud_host"
+        android:title="Use as Computer Vision Cloud Host"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_copy_edge_host"
+        android:title="Use as Computer Vision Edge Host"
+        app:showAsAction="never" />
+</menu>

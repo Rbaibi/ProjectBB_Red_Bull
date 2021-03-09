@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.protobuf'
+apply plugin: 'com.jfrog.artifactory'
+
+android {
+    archivesBaseName = "MobiledgeXSDKDemo"
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.mobiledgex.sdkdemo"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 62
+        versionName "1.1.13"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [GOOGLE_MAPS_API_KEY: "${googleMapsApiKey}"]
+        buildConfigField "String", "GOOGLE_DIRECTIONS_API_KEY", "\"${googleDirectionsApiKey}\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/io.netty.versions.properties'
+    }
+
+}
+
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.5.1-1'
+    }
+    plugins {
+        javalite {
+            artifact = "com.google.protobuf:protoc-gen-javalite:3.0.0"
+        }
+        grpc {
+            artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}"
+        }
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.plugins {
+                javalite {}
+                grpc {
+                    // Options added to --grpc_out
+                    option 'lite'
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.android.gms:play-services-auth:16.0.1'
+    // For Google Location Services.
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5+'
+    implementation 'com.google.maps:google-maps-services:0.9.0'
+    implementation 'org.slf4j:slf4j-nop:1.7.25'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    implementation "com.mobiledgex:matchingengine:${matchingengineVersion}"
+    implementation "com.mobiledgex:mel:${melVersion}"
+    implementation "io.grpc:grpc-okhttp:${grpcVersion}"
+    implementation "io.grpc:grpc-stub:${grpcVersion}"
+    implementation "io.grpc:grpc-protobuf-lite:${grpcVersion}"
+    implementation 'fr.bmartel:jspeedtest:1.32.1'
+    implementation 'com.android.volley:volley:1.1.1'
+    // Required for local unit tests (JUnit 4 framework)
+    implementation 'javax.annotation:javax.annotation-api:1.2'
+    implementation project(path: ':computervision')
+
+}
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_google_signin"
+            android:icon="@drawable/googleg_color"
+            android:title="@string/menu_sign_in_with_google" />
+        <item
+            android:id="@+id/nav_google_signout"
+            android:icon="@drawable/googleg_color"
+            android:title="@string/menu_sign_out" />
+        <item
+            android:id="@+id/nav_face_detection"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/title_activity_face_detection" />
+        <item
+            android:id="@+id/nav_face_recognition"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/title_activity_face_recognition" />
+        <item
+            android:id="@+id/nav_object_detection"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/title_activity_object_detection" />
+        <item
+            android:id="@+id/nav_pose_detection"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/title_activity_pose_detection" />
+        <item
+            android:id="@+id/nav_qoe_map"
+            android:icon="@drawable/ic_menu_qoe"
+            android:title="@string/title_activity_qoe_map" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_settings"
+            android:title="@string/title_activity_settings" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_menu_help"
+            android:title="@string/menu_about" />
+    </group>
+
+</menu>

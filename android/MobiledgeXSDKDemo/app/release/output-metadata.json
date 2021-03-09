@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.mobiledgex.sdkdemo",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 62,
+      "versionName": "1.1.13",
+      "enabled": true,
+      "outputFile": "MobiledgeXSDKDemo-release.apk"
+    }
+  ]
+}

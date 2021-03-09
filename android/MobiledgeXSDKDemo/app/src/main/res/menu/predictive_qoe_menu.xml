@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/pqoe_point_mode"
+        android:id="@+id/action_pqoe_map_mode">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/action_pqoe_mode_route"
+                    android:checkable="true"
+                    android:onClick="onModeGroupItemClick"
+                    android:title="@string/pqoe_route_point_mode" />
+                <item
+                    android:id="@+id/action_pqoe_mode_grid"
+                    android:checkable="true"
+                    android:onClick="onModeGroupItemClick"
+                    android:title="@string/pqoe_grid_point_mode" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/map_type">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/action_pqoe_map_type_normal"
+                    android:checkable="true"
+                    android:onClick="onTypeGroupItemClick"
+                    android:title="@string/pqoe_map_type_normal" />
+                <item
+                    android:id="@+id/action_pqoe_map_type_silver"
+                    android:checkable="true"
+                    android:onClick="onTypeGroupItemClick"
+                    android:title="@string/pqoe_map_type_silver" />
+                <item
+                    android:id="@+id/action_pqoe_map_type_satellite"
+                    android:checkable="true"
+                    android:onClick="onTypeGroupItemClick"
+                    android:title="@string/pqoe_map_type_satellite" />
+                <item
+                    android:id="@+id/action_pqoe_map_type_terrain"
+                    android:checkable="true"
+                    android:onClick="onTypeGroupItemClick"
+                    android:title="@string/pqoe_map_type_terrain" />
+                <item
+                    android:id="@+id/action_pqoe_map_type_hybrid"
+                    android:checkable="true"
+                    android:onClick="onTypeGroupItemClick"
+                    android:title="@string/pqoe_map_type_hybrid" />
+            </group>
+        </menu>
+    </item>
+    <item android:title="@string/pqoe_csv_file">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/action_csv_file_load"
+                    android:onClick="selectCsvFile"
+                    android:title="@string/pqoe_csv_file_load" />
+                <item
+                    android:id="@+id/action_csv_file_help"
+                    android:onClick="showCsvFileHelp"
+                    android:title="@string/pqoe_csv_file_help" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

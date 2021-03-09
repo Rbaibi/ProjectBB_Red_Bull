@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_camera_swap"
+        android:icon="@drawable/ic_menu_switch_camera"
+        android:title="Swap Camera"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_camera_settings"
+        android:icon="@drawable/ic_menu_settings"
+        android:title="Settings"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_find_cloudlet"
+        android:title="Find Closest Cloudlet" />
+    <item android:id="@+id/action_get_app_inst_list"
+        android:title="Get App Instances" />
+    <item android:id="@+id/action_manual_failover"
+        android:title="Manual Failover" />
+    <item android:id="@+id/action_camera_training"
+        android:title="Training Mode" />
+    <item android:id="@+id/action_camera_remove_training_data"
+        android:title="Remove Training Data" />
+    <item android:id="@+id/action_camera_training_guest"
+        android:checkable="true"
+        android:title="Guest Training Mode" />
+    <item android:id="@+id/action_camera_remove_training_guest_data"
+        android:title="Remove Guest Data" />
+    <item android:id="@+id/action_camera_video"
+        android:title="Play Video" />
+    <item android:id="@+id/action_camera_custom_video"
+        android:title="Play Custom Video..." />
+    <item android:id="@+id/action_camera_debug"
+        android:title="Generate Debug Info" />
+    <item android:title="Benchmark"
+        android:id="@+id/action_benchmark_submenu">
+        <menu>
+            <item
+                android:id="@+id/action_benchmark_edge"
+                android:title="Edge" />
+            <item
+                android:id="@+id/action_benchmark_cloud"
+                android:title="Cloud" />
+        </menu>
+    </item>
+
+</menu>
