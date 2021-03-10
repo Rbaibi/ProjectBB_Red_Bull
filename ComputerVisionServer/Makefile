@@ -1,5 +1,5 @@
 include Makedefs
-ORGNAME = mobiledgex-samples
+ORGNAME = techtics
 
 # To build the version with GPU support, define GPU as "true", e.g.:
 # TAG=20201110 GPU=true make docker-build
