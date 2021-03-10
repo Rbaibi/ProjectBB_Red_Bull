@@ -5,10 +5,10 @@ ORGNAME = techtics
 # TAG=20201110 GPU=true make docker-build
 ifeq ($(GPU), true)
 	DOCKERFILE = Dockerfile_gpu
-	IMAGENAME = computervision-gpu
+	IMAGENAME = redbull-gpu
 else
 	DOCKERFILE = Dockerfile
-	IMAGENAME = computervision
+	IMAGENAME = redbull2
 endif
 
 default: docker-build docker-push
