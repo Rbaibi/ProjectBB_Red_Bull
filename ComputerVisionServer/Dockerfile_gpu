@@ -56,7 +56,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 # Download weights file required for object detection
 WORKDIR /usr/src/app/moedx/pytorch_objectdetecttrack/config
-RUN wget https://vurtworld.com/projectbb/yolov3.weights
+RUN wget http://vurtworld.com/projectbb/yolov3.weights
 WORKDIR /usr/src/app/moedx
 COPY . /usr/src/app
 # Initialize the database.
